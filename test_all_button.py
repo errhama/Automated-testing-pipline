@@ -61,8 +61,9 @@ try:
 
             
         except Exception as e:
-            print(f"Test failed for {button_info['name']}: {e}")
-            test_passed = False
+           # print(f"Test failed for {button_info['name']}: {e}")
+           print("Test failed for {}: {}".format(button_info['name'], e))
+           test_passed = False
         
         finally:
             # Close the new tab if opened
@@ -72,7 +73,8 @@ try:
                 driver.switch_to.window(driver.window_handles[0])
 
 except Exception as e:
-    print(f"Test failed: {e}")
+    #print(f"Test failed: {e}")
+    print("Test failed: {}".format(e))
     test_passed = False
 
 finally:
