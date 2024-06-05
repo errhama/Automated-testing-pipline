@@ -6,9 +6,9 @@ import time
 
 # Options to configure ChromeDriver
 chrome_options = Options()
-# chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
-# chrome_options.add_argument("--no-sandbox")
-# chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 
 # Path to ChromeDriver (ensure it's in the PATH or specify the full path)
 #webdriver_service = Service(r'C:\Users\21269\Downloads\chromedriver-win64\chromedriver.exe')
