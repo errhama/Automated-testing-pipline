@@ -56,7 +56,9 @@ try:
             
             # Verify the URL of the new tab
             assert button_info["url"] in driver.current_url
-            print(f"{button_info['name']} redirection: {driver.current_url}")
+            #print(f"{button_info['name']} redirection: {driver.current_url}")
+            print("{} redirection: {}".format(button_info['name'], driver.current_url))
+
             
         except Exception as e:
             print(f"Test failed for {button_info['name']}: {e}")
