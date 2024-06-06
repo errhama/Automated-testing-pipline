@@ -2,7 +2,8 @@ FROM browserless/chrome
 # Public Chrome image
 
 # Install Python 3 (modify based on your base image)
-RUN yum -y install python3  # Replace with appropriate package manager for your base image
+RUN yum -y install python3  
+# Replace with appropriate package manager for your base image
 
 # Rest of your Dockerfile content...
 
