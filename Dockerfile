@@ -1,6 +1,10 @@
-FROM google/chrome:latest
+FROM selenium/chrome-standalone  
+# Public Chrome image
 
-RUN apt-get update && apt-get install -y python3
+# Install Python 3 (modify based on your base image)
+RUN yum -y install python3  # Replace with appropriate package manager for your base image
+
+# Rest of your Dockerfile content...
 
 WORKDIR /app
 
