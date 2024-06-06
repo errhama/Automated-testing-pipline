@@ -2,7 +2,7 @@
 FROM python:3.8-slim
 
 # Install necessary packages
-RUN apt-get update && apt-get install -y wget unzip curl
+RUN sudo apt-get update && sudo apt-get install -y wget unzip curl
 
 # Install ChromeDriver
 RUN wget https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
