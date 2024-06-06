@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     curl \
+    gnupg \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Chrome securely using apt
