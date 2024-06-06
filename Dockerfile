@@ -7,7 +7,9 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     unzip \
     python3 \
-    python3-pip
+    python3-pip \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
 
 
 # Set the working directory
