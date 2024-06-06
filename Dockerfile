@@ -35,4 +35,4 @@ WORKDIR /app
 # RUN pip3 install -r requirements.txt
 
 # Define the command to run your application
-CMD ["python3", "your_script.py"]
+CMD ["python3", "test_all_button.py"]
