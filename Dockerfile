@@ -1,4 +1,4 @@
-FROM selenium/chrome-standalone  
+FROM browserless/chrome  
 # Public Chrome image
 
 # Install Python 3 (modify based on your base image)
