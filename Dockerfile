@@ -2,7 +2,7 @@
 FROM python:3.8-slim
 
 # Install necessary packages
-RUN sudo apt-get update && sudo apt-get install -y wget unzip curl
+RUN  apt-get update &&  apt-get install -y wget unzip curl
 
 # Install ChromeDriver
 RUN wget https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
@@ -21,6 +21,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY test_all_button.py .
 
 # Command to run the tests
-#CMD ["python3", "test_all_button.py"]
-CMD ["/bin/bash"]
+CMD ["python3", "test_all_button.py"]
 
