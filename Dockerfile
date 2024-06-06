@@ -1,8 +1,16 @@
-FROM selenium/chrome-standalone  
-# Install Python 3 and pip
-RUN apt-get update && apt-get install -y python3 python3-pip
+FROM debian:latest
 
-# Set the working directory inside the container
+# Install dependencies
+
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    unzip \
+    python3 \
+    python3-pip
+
+
+# Set the working directory
 WORKDIR /app
 
 # Copy the requirements file and install dependencies
