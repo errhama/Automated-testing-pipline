@@ -17,7 +17,8 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 # Install ChromeDriver
-RUN wget -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
+RUN mkdir -p /usr/local/bin/chromedriver-linux64/ \
+ && wget -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
  && unzip /tmp/chromedriver.zip -d /usr/local/bin/chromedriver-linux64/ \
  && rm /tmp/chromedriver.zip \
  && chmod +x /usr/local/bin/chromedriver-linux64/chromedriver
