@@ -3,10 +3,8 @@ FROM python:3.8-slim
 # Run commands as the root user
 USER root
 # Install necessary packages
-RUN apt-get update && apt-get install -y \
-    wget \
-    unzip \
-    curl 
+RUN apt-get update && apt-get install -y gnupg curl unzip wget
+
 
 # Install Chrome securely using apt
 RUN curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
