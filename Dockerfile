@@ -4,11 +4,7 @@ FROM python:3.8-slim
 # Install necessary packages
 RUN  apt-get update &&  apt-get install -y wget unzip curl
 
-# Install ChromeDriver
-RUN wget https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
-    && unzip chromedriver_linux64.zip -d /usr/local/bin/chromedriver-linux64 \
-    && rm chromedriver_linux64.zip
-# Set the working directory in the container
+
 WORKDIR /app
 
 # Copy Python dependencies file
