@@ -24,4 +24,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY test_all_button.py .
 
 # Command to run the tests
-CMD ["python3", "test_all_button.py"]
+#CMD ["python3", "test_all_button.py"]
+CMD ["/bin/bash"]
+
