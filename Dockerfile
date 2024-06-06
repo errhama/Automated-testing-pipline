@@ -1,12 +1,14 @@
-FROM debian:latest
+FROM python:3.10
 
 # Install dependencies
-
 RUN apt-get update && apt-get install -y \
     wget \
     unzip \
-    python3-full \
-    python3-pip
+ && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+ && apt install -y ./google-chrome-stable_current_amd64.deb \
+ && rm google-chrome-stable_current_amd64.deb \
+ && apt-get clean 
+
 # Set the working directory
 WORKDIR /app
 
