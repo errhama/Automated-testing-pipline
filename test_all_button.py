@@ -19,15 +19,15 @@ driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
 # Define the buttons to be tested
 buttons_to_test = [
-    {
-        "url": "https://www.apec.fr/candidat/page-entreprise.html/detail?id=591263",
-        "selector": "a.h-button[href='https://www.apec.fr/candidat/page-entreprise.html/detail?id=591263']",
-        "name": "APEC Button"
-    },
-    {
+     {
         "url": "https://www.welcometothejungle.com/fr/companies/klanik",
         "selector": "a.h-button[href='https://www.welcometothejungle.com/fr/companies/klanik']",
         "name": "Welcome To The Jungle Button"
+    },
+     {
+        "url": "https://www.apec.fr/candidat/page-entreprise.html/detail?id=591263",
+        "selector": "a.h-button[href='https://www.apec.fr/candidat/page-entreprise.html/detail?id=591263']",
+        "name": "APEC Button"
     }
 ]
 
@@ -49,7 +49,7 @@ try:
             button.click()
             
             # Wait for the new tab to open
-            time.sleep(3)  # Adjust the sleep time as needed
+            time.sleep(2)  # Adjust the sleep time as needed
             
             # Switch to the new tab
             driver.switch_to.window(driver.window_handles[-1])
